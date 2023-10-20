@@ -1,21 +1,21 @@
 class Solver
-    def self.factorial(n)
-        raise ArgumentError, 'Input must be a non-negative integer' if n < 0
-    
-        result = 1
-        (1..n).each { |i| result *= i }
-        result
-    end
+  def self.factorial(num)
+    raise ArgumentError, 'Input must be a non-negative integer' if num.negative?
 
-    def self.reverse(word)
-        word.reverse
-    end
+    result = 1
+    (1..num).each { |i| result *= i }
+    result
+  end
 
-    def self.fizzbuzz(n)
-      return 'fizzbuzz' if (n % 3).zero? && (n % 5).zero?
-      return 'fizz' if (n % 3).zero?
-      return 'buzz' if (n % 5).zero?
-  
-      n.to_s
-    end
+  def self.reverse(word)
+    word.reverse
+  end
+
+  def self.fizzbuzz(num)
+    return 'fizzbuzz' if (num % 3).zero? && (num % 5).zero?
+    return 'fizz' if (num % 3).zero?
+    return 'buzz' if (num % 5).zero?
+
+    num.to_s
+  end
 end
